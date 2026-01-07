@@ -1,12 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Moon, Sun, Menu, Search, X, Instagram, Youtube, Twitter } from 'lucide-react';
+import SEO from './SEO';
 
 interface LayoutProps {
   children: React.ReactNode;
+  title?: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout: React.FC<LayoutProps> = ({ 
+  children, 
+  title = 'Shinjitsu - Análises Profundas de Anime e Mangá',
+  description = 'Explorando a profundidade do universo otaku com análises críticas, reviews e editoriais sobre anime, mangá e cultura pop.',
+  keywords = 'anime, mangá, análise, review, crítica, otaku, cultura pop, shinjitsu',
+  image 
+}) => {
   const [isDark, setIsDark] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
@@ -46,6 +57,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <div className="min-h-screen bg-paper dark:bg-paper-dark transition-colors duration-300 flex flex-col relative font-display text-ink dark:text-white">
+      <SEO 
+        title={title}
+        description={description}
+        keywords={keywords}
+        image={image}
+        url={window.location.href}
+        type="website"
+      />
+      
       {/* Background Halftone Pattern */}
       <div className="fixed inset-0 pointer-events-none z-0 opacity-10">
         <div className="absolute inset-0 bg-halftone-light bg-halftone-size dark:hidden"></div>

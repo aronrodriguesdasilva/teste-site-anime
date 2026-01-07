@@ -72,6 +72,9 @@ const Reviews: React.FC = () => {
 
             {/* Grid of Posts */}
             <div className="max-w-6xl mx-auto px-4 py-12">
+                <h2 className="text-2xl font-black uppercase tracking-tighter text-ink dark:text-white mb-8">
+                    {activeCategory ? `${activeCategory} - Análises` : 'Todas as Análises'}
+                </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {filteredPosts.map((post) => (
                         <Link
@@ -104,9 +107,9 @@ const Reviews: React.FC = () => {
                                     <span>{post.readTime} LEITURA</span>
                                 </div>
 
-                                <h2 className="font-display font-bold text-xl leading-tight mb-4 text-ink dark:text-white group-hover:text-accent-anime transition-colors line-clamp-2">
+                                <h3 className="font-display font-bold text-xl leading-tight mb-4 text-ink dark:text-white group-hover:text-accent-anime transition-colors line-clamp-2">
                                     {post.title}
-                                </h2>
+                                </h3>
 
                                 <p className="text-sm text-gray-600 dark:text-gray-300 line-clamp-3 mb-6 font-body leading-relaxed">
                                     {post.excerpt}

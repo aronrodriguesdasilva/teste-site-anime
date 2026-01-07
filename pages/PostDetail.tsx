@@ -109,10 +109,10 @@ const PostDetail: React.FC = () => {
 
         {/* Continue Reading */}
         <section className="mt-16">
-          <h3 className="font-display font-bold text-3xl mb-8 flex items-center gap-3 text-ink dark:text-white">
+          <h2 className="font-display font-bold text-3xl mb-8 flex items-center gap-3 text-ink dark:text-white">
             <span className="w-3 h-8 bg-ink dark:bg-white"></span>
             CONTINUE LENDO
-          </h3>
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {relatedPosts.map(related => (
               <Link to={`/post/${related.id}`} key={related.id} className="group block relative border-2 border-ink dark:border-white shadow-manga dark:shadow-manga-dark hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all bg-paper dark:bg-paper-dark">
@@ -121,7 +121,7 @@ const PostDetail: React.FC = () => {
                   <span className="absolute top-2 left-2 bg-paper dark:bg-paper-dark text-ink dark:text-white border border-ink dark:border-white text-[10px] font-bold px-2 py-0.5 uppercase">{related.category}</span>
                 </div>
                 <div className="p-4">
-                  <h4 className="font-display font-bold text-xl leading-tight group-hover:underline decoration-2 underline-offset-2 text-ink dark:text-white line-clamp-2">{related.title}</h4>
+                  <h3 className="font-display font-bold text-xl leading-tight group-hover:underline decoration-2 underline-offset-2 text-ink dark:text-white line-clamp-2">{related.title}</h3>
                 </div>
               </Link>
             ))}

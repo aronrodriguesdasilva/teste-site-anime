@@ -54,10 +54,12 @@ const Home: React.FC = () => {
 
       {/* Featured Section */}
       <section>
-        <div className="flex items-center mb-4 pl-1">
-          <div className="h-4 w-4 bg-ink dark:bg-white mr-2"></div>
-          <h2 className="text-sm font-black uppercase tracking-widest text-ink dark:text-white">Destaque da Semana</h2>
-        </div>
+        <h1 className="font-display font-black text-5xl md:text-7xl uppercase tracking-tighter text-ink dark:text-white mb-2">
+          Destaque da Semana
+        </h1>
+        <p className="font-mono text-sm md:text-base uppercase tracking-widest text-gray-500 dark:text-gray-400">
+          Análise exclusiva do melhor conteúdo otaku
+        </p>
         <Link to={`/post/${featuredPost.id}`} className="block">
           <article className="relative group cursor-pointer border-4 border-ink dark:border-white shadow-manga dark:shadow-manga-dark bg-paper dark:bg-paper-dark transition-transform hover:-translate-y-1 hover:translate-x-1 hover:shadow-none dark:hover:shadow-none">
             <div className="relative overflow-hidden aspect-[4/3] md:aspect-[21/9] border-b-4 border-ink dark:border-white">
@@ -76,9 +78,9 @@ const Home: React.FC = () => {
                   <Calendar size={14} /> {featuredPost.date}
                 </span>
               </div>
-              <h1 className="text-ink dark:text-white text-2xl md:text-3xl font-black leading-tight mb-3 font-display uppercase italic">
+              <h2 className="text-ink dark:text-white text-2xl md:text-3xl font-black leading-tight mb-3 font-display uppercase italic">
                 {featuredPost.title}
-              </h1>
+              </h2>
               <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base line-clamp-3 font-body font-medium leading-relaxed">
                 {featuredPost.excerpt}
               </p>
@@ -90,7 +92,9 @@ const Home: React.FC = () => {
       {/* Latest Posts */}
       <section>
         <div className="flex items-center justify-between mb-6 pl-1 border-b-4 border-ink dark:border-white pb-1">
-          <h2 className="text-lg font-black uppercase tracking-tighter text-ink dark:text-white italic">Últimas Publicações</h2>
+          <h2 className="text-lg font-black uppercase tracking-tighter text-ink dark:text-white italic">
+            Últimas Publicações
+          </h2>
           <Link to="/post" className="text-ink dark:text-white text-xs font-bold uppercase tracking-wider hover:underline flex items-center gap-1">
             Ver tudo <ArrowRight size={14} />
           </Link>
@@ -138,7 +142,9 @@ const Home: React.FC = () => {
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-ink dark:bg-white text-white dark:text-ink px-4 py-1 font-black text-xs uppercase tracking-widest border-2 border-white dark:border-ink">
           Newsletter
         </div>
-        <h3 className="text-xl font-black text-ink dark:text-white mb-2 uppercase italic tracking-tighter">Não perca um capítulo</h3>
+        <h2 className="text-xl font-black text-ink dark:text-white mb-2 uppercase italic tracking-tighter">
+          Não perca um capítulo
+        </h2>
         <p className="text-sm text-gray-600 dark:text-gray-400 mb-6 px-2 font-medium">
           Receba nossas críticas profundas e recomendações semanais diretamente no seu email.
         </p>
