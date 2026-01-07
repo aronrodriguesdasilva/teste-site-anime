@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shinjitsu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Oswald:wght@400;500;700&family=Outfit:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,line-clamp,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#000000",
+              "primary-dark": "#ffffff",
+              "accent-anime": "#FF4500",
+              "accent-manga": "#4169E1",
+              "accent-editorial": "#8A2BE2",
+              ink: "#000000",
+              paper: "#ffffff",
+              "paper-dark": "#050505",
+              "gray-manga": "#F4F4F5",
+              "gray-manga-dark": "#18181b",
+            },
+            fontFamily: {
+              display: ["Oswald", "Outfit", "sans-serif"],
+              body: ["Merriweather", "serif"],
+              ui: ["Inter", "sans-serif"],
+            },
+            boxShadow: {
+              manga: "4px 4px 0px 0px rgba(0,0,0,1)",
+              "manga-dark": "4px 4px 0px 0px rgba(255,255,255,1)",
+              "manga-sm": "2px 2px 0px 0px rgba(0,0,0,1)",
+              "manga-sm-dark": "2px 2px 0px 0px rgba(255,255,255,1)",
+            },
+            backgroundImage: {
+              'halftone-light': 'radial-gradient(#000 1px, transparent 1px)',
+              'halftone-dark': 'radial-gradient(#333 1px, transparent 1px)',
+            }
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        min-height: 100vh;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .bg-halftone-size {
+        background-size: 20px 20px;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
