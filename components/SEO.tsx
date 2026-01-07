@@ -1,5 +1,4 @@
 import React from 'react';
-import Head from 'react-helmet';
 
 interface SEOProps {
   title: string;
@@ -23,7 +22,7 @@ const SEO: React.FC<SEOProps> = ({
   const fullTitle = title.includes('Shinjitsu') ? title : `${title} | Shinjitsu`;
   
   return (
-    <Head>
+    <>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
@@ -45,7 +44,7 @@ const SEO: React.FC<SEOProps> = ({
       
       {/* Additional meta tags */}
       <link rel="canonical" href={url || window.location.href} />
-    </Head>
+    </>
   );
 };
 
